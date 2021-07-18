@@ -18,27 +18,56 @@
             href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="STYLE\style.css" />
     <title>SJR - Work Day Scheduler</title>  
 </head>
     <body>
         <header class="jumbotron">
             <h1 class="display-3">Work Day Scheduler</h1>
-            <p class="lead">A simple calendar app for scheduling your work day</p>
+            <p class="lead">By the hour - Schedule your work day!</p>
             <p id="currentDay" class="lead"></p>
+            <p id="currentTime" class="lead"></p>
         </header>
-            <div class="container">
-                
-
-                <!-- Timeblocks go here -->
-
-
+        
+        
+        <!-- TIME BLOCKS -->
+    <div class="container"> <!-- fluid time block? -->                               
+        
+        <!-- TIME CHUNK: 9 AM -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend row">
+                    <span class="input-group-text hour">09:00 AM</span>
             </div>
+                <textarea value="" id="9amEntry" class="form-control description textarea" type="text" cols="90" rows="3"></textarea>
+            <div class="input-group-append">
+                    <button id="button9" class="saveBtn" type="button">
+                        <i class='fas fa-check-circle'></i>
+                    </button>
+            </div>
+        </div>
+    
+        <!-- TIME CHUNK: 10 AM -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend row">
+                    <span class="input-group-text hour">10:00 AM</span>
+            </div>
+                <textarea value="" id="10amEntry" class="form-control description textarea" type="text" cols="90" rows="3"></textarea>
+            <div class="input-group-append">
+                    <button id="button10" class="saveBtn" type="button">
+                        <i class='fas fa-check-circle'></i>
+                    </button>
+            </div>
+        </div>
+    
+    
+    </div>
     
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <footer>
-            <h6>Made with 🌼🌷🌻 - SJR, 2021.</h6>
+            <p id="foot">Made with 🌼🌷🌻 - SJR, 2021.<br>
+                <a id="please" href="https://thebeeconservancy.org/" target="blank">Save the bees 🐝</a>
+            </p>                           
         </footer>
     </body>
 </html>
