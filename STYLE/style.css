@@ -59,7 +59,9 @@ textarea {
 
 .saveBtn {
   font-size: 25px;
-  border-left: 1px solid #000000;
+  border-color: unset;
+  /* OMG I FIXED IT THIS IS BEAUTIFUL */
+  border-style: none outset outset none;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #ff74ca;
@@ -70,8 +72,6 @@ textarea {
 .saveBtn i:hover {
   font-size: 28px;
   transition: all 0.1s ease-in-out;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
 
 #foot {
@@ -86,13 +86,28 @@ textarea {
 
 .input-group-prepend {
   font-size: 25px;
-  border-left: 1px solid #000000;
+  border-width: 2px;
+  border-right: 1px solid transparent;
+  border-style: none none outset outset;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   background-color: #ff74ca;
-  /* color: white; */
   padding: 20px 40px;
 }
+
 .input-group-text {
   border: none;
+}
+
+.form-control {
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+button:focus {
+  outline: none;
+  background-color: #eb58b2;
+}
+
+text-area:focus {
+  border-style: none;
 }
